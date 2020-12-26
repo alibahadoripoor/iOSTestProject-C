@@ -10,4 +10,7 @@ import Foundation
 struct CommentCellViewModel {
     let name: String
     let body: String
+    var profileBgColorId: Int{
+        return Int.random(in: 0...4)
+    }
 }

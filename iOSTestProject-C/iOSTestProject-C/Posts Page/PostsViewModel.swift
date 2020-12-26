@@ -9,11 +9,15 @@ import UIKit
 
 final class PostsViewModel{
     
+    //MARK: - Variables and Constants
+    
     private var userService: UserServiceProtocol!
     private var postService: PostServiceProtocol!
     private var users: [User] = []
     private var posts: [Post] = []
     var onUpdate: ()->() = {}
+    
+    //MARK: - Inits
     
     init(userService: UserServiceProtocol = WebService(),
          postService: PostServiceProtocol = WebService()) {
@@ -21,6 +25,8 @@ final class PostsViewModel{
         self.userService = userService
         self.postService = postService
     }
+    
+    //MARK: - Notifications from UI
     
     func viewDidLoad(){
         

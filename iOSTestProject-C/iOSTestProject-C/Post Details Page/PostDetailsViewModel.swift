@@ -9,11 +9,15 @@ import Foundation
 
 final class PostDetailsViewModel{
     
+    //MARK: - Variables and Constants
+    
     private var commentService: CommentServiceProtocol!
     private var comments: [Comment] = []
     private var post: Post!
     private var user: User!
     var onUpdate: ()->() = {}
+    
+    //MARK: - Inits
     
     init(post: Post, user: User,
          commentService: CommentServiceProtocol = WebService()) {
@@ -22,6 +26,8 @@ final class PostDetailsViewModel{
         self.post = post
         self.user = user
     }
+    
+    //MARK: - Notifications from UI
     
     func viewDidLoad(){
         

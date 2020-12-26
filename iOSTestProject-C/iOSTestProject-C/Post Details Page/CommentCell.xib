@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -16,19 +17,23 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="155"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nrp-5s-7BY">
+                        <rect key="frame" x="68" y="16" width="236" height="139"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                    </view>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="L" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gk1-i6-e1V">
-                        <rect key="frame" x="32" y="16" width="34" height="34"/>
+                        <rect key="frame" x="16" y="16" width="44" height="44"/>
                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="34" id="J4A-cT-qY2"/>
-                            <constraint firstAttribute="height" constant="34" id="tXe-NW-jBM"/>
+                            <constraint firstAttribute="width" constant="44" id="J4A-cT-qY2"/>
+                            <constraint firstAttribute="height" constant="44" id="tXe-NW-jBM"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment owner name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZR-AC-xC2">
-                        <rect key="frame" x="74" y="16" width="230" height="34"/>
+                        <rect key="frame" x="84" y="24" width="204" height="34"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="34" id="iof-va-l3u"/>
@@ -38,23 +43,26 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment body" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CuR-cB-lbw">
-                        <rect key="frame" x="74" y="58" width="230" height="81"/>
+                        <rect key="frame" x="84" y="66" width="204" height="73"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="Gk1-i6-e1V" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="6ec-d6-jz3"/>
-                    <constraint firstItem="eZR-AC-xC2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="CQb-0b-iOQ"/>
-                    <constraint firstItem="Gk1-i6-e1V" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="32" id="Rw8-RX-vnu"/>
-                    <constraint firstItem="eZR-AC-xC2" firstAttribute="leading" secondItem="Gk1-i6-e1V" secondAttribute="trailing" constant="8" symbolic="YES" id="T2Q-D8-HZe"/>
+                    <constraint firstItem="eZR-AC-xC2" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="24" id="CQb-0b-iOQ"/>
+                    <constraint firstItem="CuR-cB-lbw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="84" id="DS0-p7-fGH"/>
+                    <constraint firstItem="Gk1-i6-e1V" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Rw8-RX-vnu"/>
+                    <constraint firstItem="nrp-5s-7BY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="Rwf-UJ-VUB"/>
+                    <constraint firstItem="eZR-AC-xC2" firstAttribute="leading" secondItem="Gk1-i6-e1V" secondAttribute="trailing" constant="24" id="T2Q-D8-HZe"/>
                     <constraint firstAttribute="bottom" secondItem="CuR-cB-lbw" secondAttribute="bottom" constant="16" id="cAa-1l-dbV"/>
-                    <constraint firstAttribute="trailing" secondItem="CuR-cB-lbw" secondAttribute="trailing" constant="16" id="poM-T5-5RJ"/>
+                    <constraint firstAttribute="trailing" secondItem="nrp-5s-7BY" secondAttribute="trailing" constant="16" id="kkT-ch-6QR"/>
+                    <constraint firstAttribute="bottom" secondItem="nrp-5s-7BY" secondAttribute="bottom" id="mqn-LW-5vy"/>
+                    <constraint firstAttribute="trailing" secondItem="CuR-cB-lbw" secondAttribute="trailing" constant="32" id="poM-T5-5RJ"/>
                     <constraint firstItem="CuR-cB-lbw" firstAttribute="top" secondItem="eZR-AC-xC2" secondAttribute="bottom" constant="8" symbolic="YES" id="py0-N4-bZG"/>
-                    <constraint firstItem="CuR-cB-lbw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="74" id="ryz-cy-9Ns"/>
-                    <constraint firstAttribute="trailing" secondItem="eZR-AC-xC2" secondAttribute="trailing" constant="16" id="viN-sT-R3a"/>
+                    <constraint firstItem="nrp-5s-7BY" firstAttribute="leading" secondItem="Gk1-i6-e1V" secondAttribute="trailing" constant="8" symbolic="YES" id="sDj-ST-Svp"/>
+                    <constraint firstAttribute="trailing" secondItem="eZR-AC-xC2" secondAttribute="trailing" constant="32" id="viN-sT-R3a"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -62,8 +70,14 @@
                 <outlet property="authorNameLabel" destination="eZR-AC-xC2" id="s6G-Ch-k4J"/>
                 <outlet property="authorProfileLabel" destination="Gk1-i6-e1V" id="pub-l9-Y76"/>
                 <outlet property="commentBodyLabel" destination="CuR-cB-lbw" id="zvo-H4-joO"/>
+                <outlet property="customBackgroundView" destination="nrp-5s-7BY" id="jcG-l3-fWt"/>
             </connections>
             <point key="canvasLocation" x="95.652173913043484" y="90.736607142857139"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

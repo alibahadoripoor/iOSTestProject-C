@@ -9,11 +9,15 @@ import UIKit
 
 final class PostsViewController: UIViewController {
 
+    //MARK: - Outlets
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     //MARK: - Variables and Constants
     
+    private let refreshControl = UIRefreshControl()
+    private let postCell = "PostCell"
     var viewModel: PostsViewModel!
     
     //MARK: - View lifecycle
@@ -30,19 +34,31 @@ final class PostsViewController: UIViewController {
     
     private func setupUI(){
         
+        ///navigation setup
         title = "Posts"
+        
+        ///tableView setup
         tableView.delegate = self
         tableView.dataSource = self
-        let cellNib = UINib(nibName: "PostCell", bundle: nil)
-        tableView.register(cellNib, forCellReuseIdentifier: "PostCell")
+        let cellNib = UINib(nibName: postCell, bundle: nil)
+        tableView.register(cellNib, forCellReuseIdentifier: postCell)
         tableView.tableFooterView = UIView()
+        refreshControl.addTarget(self, action: #selector(viewDidRefresh), for: .valueChanged)
+        tableView.refreshControl = refreshControl
+        
+        ///activityIndicator setup
         activityIndicator.startAnimating()
+    }
+    
+    @objc private dynamic func viewDidRefresh(){
+        viewModel.viewDidLoad()
     }
     
     private func setupCallBacks(){
         
         viewModel.onUpdate = { [weak self] in
             
+            self?.refreshControl.endRefreshing()
             self?.activityIndicator.stopAnimating()
             self?.tableView.reloadData()
         }
@@ -60,7 +76,7 @@ extension PostsViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: postCell, for: indexPath)
         
         if let postCell = cell as? PostCell {
             postCell.viewModel = viewModel.setCellViewModel(for: indexPath)

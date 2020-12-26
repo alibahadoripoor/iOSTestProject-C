@@ -40,42 +40,52 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mgN-Us-gNR">
-                        <rect key="frame" x="16" y="94" width="288" height="123"/>
+                        <rect key="frame" x="16" y="94" width="288" height="110"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mQ4-hP-ysp">
-                        <rect key="frame" x="0.0" y="233" width="320" height="30"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comments Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBw-PE-76B">
-                                <rect key="frame" x="32" y="4" width="272" height="22"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <rect key="frame" x="16" y="220" width="288" height="0.5"/>
+                        <color key="backgroundColor" systemColor="separatorColor"/>
                         <constraints>
-                            <constraint firstItem="PBw-PE-76B" firstAttribute="leading" secondItem="mQ4-hP-ysp" secondAttribute="leading" constant="32" id="CBd-Qu-uPT"/>
-                            <constraint firstItem="PBw-PE-76B" firstAttribute="top" secondItem="mQ4-hP-ysp" secondAttribute="top" constant="4" id="GDP-3i-yEE"/>
-                            <constraint firstAttribute="height" constant="30" id="OxN-Rw-itp"/>
-                            <constraint firstAttribute="bottom" secondItem="PBw-PE-76B" secondAttribute="bottom" constant="4" id="eXN-nw-8JQ"/>
-                            <constraint firstAttribute="trailing" secondItem="PBw-PE-76B" secondAttribute="trailing" constant="16" id="ft3-Tv-N6r"/>
+                            <constraint firstAttribute="height" constant="0.5" id="Lu6-x3-qys"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comments Number" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PBw-PE-76B">
+                        <rect key="frame" x="16" y="221.5" width="272" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="z9A-NT-vaz"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" systemColor="systemBlueColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IRG-S2-M78">
+                        <rect key="frame" x="0.0" y="262.5" width="320" height="0.5"/>
+                        <color key="backgroundColor" systemColor="separatorColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="zfW-g8-VdF"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="mQ4-hP-ysp" secondAttribute="trailing" id="01P-lA-Zin"/>
+                    <constraint firstAttribute="trailing" secondItem="mQ4-hP-ysp" secondAttribute="trailing" constant="16" id="01P-lA-Zin"/>
                     <constraint firstItem="mQ4-hP-ysp" firstAttribute="top" secondItem="mgN-Us-gNR" secondAttribute="bottom" constant="16" id="3hL-9Q-Sgu"/>
                     <constraint firstItem="bdZ-Bw-8pD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="4GA-nA-Vri"/>
+                    <constraint firstAttribute="trailing" secondItem="IRG-S2-M78" secondAttribute="trailing" id="6Y7-hg-IgM"/>
+                    <constraint firstItem="IRG-S2-M78" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="8KI-SI-2FW"/>
                     <constraint firstItem="bB1-0p-wJi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="BWV-D1-gzU"/>
                     <constraint firstAttribute="trailing" secondItem="mgN-Us-gNR" secondAttribute="trailing" constant="16" id="Ow6-1r-vKF"/>
-                    <constraint firstAttribute="bottom" secondItem="mQ4-hP-ysp" secondAttribute="bottom" id="PCa-k8-ebz"/>
                     <constraint firstAttribute="trailing" secondItem="bdZ-Bw-8pD" secondAttribute="trailing" constant="16" id="QIx-t0-d7g"/>
+                    <constraint firstAttribute="bottom" secondItem="IRG-S2-M78" secondAttribute="bottom" id="R4j-8W-qrv"/>
+                    <constraint firstItem="PBw-PE-76B" firstAttribute="top" secondItem="mQ4-hP-ysp" secondAttribute="bottom" constant="1" id="S0I-gQ-cMu"/>
+                    <constraint firstItem="IRG-S2-M78" firstAttribute="top" secondItem="PBw-PE-76B" secondAttribute="bottom" constant="1" id="ScN-BQ-cIC"/>
+                    <constraint firstAttribute="trailing" secondItem="PBw-PE-76B" secondAttribute="trailing" constant="32" id="Srr-By-Put"/>
                     <constraint firstItem="bB1-0p-wJi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="YBQ-Xd-LKp"/>
+                    <constraint firstItem="PBw-PE-76B" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Yk0-sF-DMK"/>
                     <constraint firstItem="mgN-Us-gNR" firstAttribute="top" secondItem="bB1-0p-wJi" secondAttribute="bottom" constant="8" id="gNy-PC-vJj"/>
-                    <constraint firstItem="mQ4-hP-ysp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="gaT-LD-UnI"/>
+                    <constraint firstItem="mQ4-hP-ysp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="gaT-LD-UnI"/>
                     <constraint firstItem="bdZ-Bw-8pD" firstAttribute="leading" secondItem="bB1-0p-wJi" secondAttribute="trailing" constant="8" symbolic="YES" id="mEE-Rx-Sf6"/>
                     <constraint firstItem="mgN-Us-gNR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="yKN-JT-KYY"/>
                 </constraints>
@@ -91,8 +101,11 @@
         </tableViewCell>
     </objects>
     <resources>
-        <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="separatorColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

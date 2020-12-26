@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB0FFA892597D60600563B99 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0FFA882597D60600563B99 /* ColorPalette.swift */; };
 		DB3E97E92596548F008D0907 /* PostDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3E97E72596548F008D0907 /* PostDetailsViewController.swift */; };
 		DB3E97EA2596548F008D0907 /* PostDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB3E97E82596548F008D0907 /* PostDetailsViewController.xib */; };
 		DB3E97ED259654C1008D0907 /* PostDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3E97EC259654C1008D0907 /* PostDetailsViewModel.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DB0FFA882597D60600563B99 /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
 		DB3E97E72596548F008D0907 /* PostDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsViewController.swift; sourceTree = "<group>"; };
 		DB3E97E82596548F008D0907 /* PostDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostDetailsViewController.xib; sourceTree = "<group>"; };
 		DB3E97EC259654C1008D0907 /* PostDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsViewModel.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				DB43836A2594EC93008FEC99 /* Post.swift */,
 				DB4383762594EE07008FEC99 /* Comment.swift */,
 				DB4383842594FC60008FEC99 /* User.swift */,
+				DB0FFA882597D60600563B99 /* ColorPalette.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				DB4383772594EE07008FEC99 /* Comment.swift in Sources */,
 				DB4383852594FC60008FEC99 /* User.swift in Sources */,
 				DB3E980625967826008D0907 /* PostDetailsCellViewModel.swift in Sources */,
+				DB0FFA892597D60600563B99 /* ColorPalette.swift in Sources */,
 				DB3E97F125965E4A008D0907 /* CommentCellViewModel.swift in Sources */,
 				DB3E97F5259665C5008D0907 /* CommentCell.swift in Sources */,
 				DB43838A2594FD93008FEC99 /* PostsViewModel.swift in Sources */,

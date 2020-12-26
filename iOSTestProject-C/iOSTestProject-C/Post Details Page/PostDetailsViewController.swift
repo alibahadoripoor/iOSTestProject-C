@@ -9,11 +9,16 @@ import UIKit
 
 final class PostDetailsViewController: UIViewController {
 
+    //MARK: - Outlets
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     //MARK: - Variables and Constants
     
+    private let refreshControl = UIRefreshControl()
+    private let postDetailsCell = "PostDetailsCell"
+    private let commentCell = "CommentCell"
     var viewModel: PostDetailsViewModel!
     
     //MARK: - View lifecycle
@@ -30,21 +35,34 @@ final class PostDetailsViewController: UIViewController {
     
     private func setupUI(){
         
+        ///navigation setup
         title = "Post Details"
+        
+        ///tableView setup
         tableView.delegate = self
         tableView.dataSource = self
-        let postDetailsCellNib = UINib(nibName: "PostDetailsCell", bundle: nil)
-        tableView.register(postDetailsCellNib, forCellReuseIdentifier: "PostDetailsCell")
-        let commentCellNib = UINib(nibName: "CommentCell", bundle: nil)
-        tableView.register(commentCellNib, forCellReuseIdentifier: "CommentCell")
+        let postDetailsCellNib = UINib(nibName: postDetailsCell, bundle: nil)
+        tableView.register(postDetailsCellNib, forCellReuseIdentifier: postDetailsCell)
+        let commentCellNib = UINib(nibName: commentCell, bundle: nil)
+        tableView.register(commentCellNib, forCellReuseIdentifier: commentCell)
+        tableView.separatorStyle = .none
         tableView.tableFooterView = UIView()
+        refreshControl.addTarget(self, action: #selector(viewDidRefresh), for: .valueChanged)
+        tableView.refreshControl = refreshControl
+        
+        ///activityIndicator setup
         activityIndicator.startAnimating()
+    }
+    
+    @objc private dynamic func viewDidRefresh(){
+        viewModel.viewDidLoad()
     }
     
     private func setupCallBacks(){
         
         viewModel.onUpdate = { [weak self] in
             
+            self?.refreshControl.endRefreshing()
             self?.activityIndicator.stopAnimating()
             self?.tableView.reloadData()
         }
@@ -57,28 +75,26 @@ extension PostDetailsViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return viewModel.commentsNumber() + 1
+        return viewModel.commentsNumber() + 1 ///for the details cell
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if indexPath.item == 0 {
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: "PostDetailsCell", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: postDetailsCell, for: indexPath)
             
             if let postDetailsCell = cell as? PostDetailsCell {
                 postDetailsCell.viewModel = viewModel.setPostDetailsViewModel()
-                postDetailsCell.separatorInset.left = view.frame.width
             }
             
             return cell
         }
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CommentCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: commentCell, for: indexPath)
         
         if let commentCell = cell as? CommentCell {
             commentCell.viewModel = viewModel.setCellViewModel(for: indexPath)
-            commentCell.separatorInset.left = 74
         }
         
         return cell
