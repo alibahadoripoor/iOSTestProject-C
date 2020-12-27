@@ -7,10 +7,6 @@
 
 import Foundation
 
-enum HTTPError: Error {
-    case invalidResponse, noData, failedRequest, invalidData
-}
-
 typealias fetchDataCompletion = (Data?, HTTPError?) -> ()
 
 protocol DataServiceProtocol {

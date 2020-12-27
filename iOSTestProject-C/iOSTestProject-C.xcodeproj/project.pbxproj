@@ -8,6 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		DB0FFA892597D60600563B99 /* ColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0FFA882597D60600563B99 /* ColorPalette.swift */; };
+		DB0FFA8C2597D95200563B99 /* HTTPError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0FFA8B2597D95200563B99 /* HTTPError.swift */; };
+		DB0FFAA32597F40A00563B99 /* DataServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0FFAA22597F40A00563B99 /* DataServiceTests.swift */; };
+		DB0FFAA72597F4E000563B99 /* PostsDataServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0FFAA62597F4E000563B99 /* PostsDataServiceMock.swift */; };
+		DB0FFAAC2597F55000563B99 /* Posts.json in Resources */ = {isa = PBXBuildFile; fileRef = DB0FFAAB2597F55000563B99 /* Posts.json */; };
+		DB0FFAB22597F57C00563B99 /* Users.json in Resources */ = {isa = PBXBuildFile; fileRef = DB0FFAB12597F57C00563B99 /* Users.json */; };
+		DB0FFAB82597F5A400563B99 /* Comments.json in Resources */ = {isa = PBXBuildFile; fileRef = DB0FFAB72597F5A400563B99 /* Comments.json */; };
+		DB0FFAC02597F6FC00563B99 /* UsersDataServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0FFABF2597F6FC00563B99 /* UsersDataServiceMock.swift */; };
+		DB0FFAC42597F79600563B99 /* CommentsDataServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0FFAC32597F79600563B99 /* CommentsDataServiceMock.swift */; };
+		DB0FFACC2597F7E800563B99 /* WebServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB0FFACB2597F7E800563B99 /* WebServiceTests.swift */; };
+		DB167F5F25980E11001047B6 /* PostsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB167F5E25980E11001047B6 /* PostsViewModelTests.swift */; };
+		DB167F65259810CA001047B6 /* UserServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB167F64259810CA001047B6 /* UserServiceMock.swift */; };
+		DB167F69259810DF001047B6 /* PostServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB167F68259810DF001047B6 /* PostServiceMock.swift */; };
+		DB167F6F259816E9001047B6 /* PostDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB167F6E259816E9001047B6 /* PostDetailsViewModelTests.swift */; };
+		DB167F7525981703001047B6 /* CommentServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB167F7425981703001047B6 /* CommentServiceMock.swift */; };
 		DB3E97E92596548F008D0907 /* PostDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3E97E72596548F008D0907 /* PostDetailsViewController.swift */; };
 		DB3E97EA2596548F008D0907 /* PostDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DB3E97E82596548F008D0907 /* PostDetailsViewController.xib */; };
 		DB3E97ED259654C1008D0907 /* PostDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3E97EC259654C1008D0907 /* PostDetailsViewModel.swift */; };
@@ -35,8 +49,34 @@
 		DB4766432593C96D0014E458 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB4766412593C96D0014E458 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		DB0FFA972597DB7500563B99 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB47662B2593C96B0014E458 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DB4766322593C96B0014E458;
+			remoteInfo = "iOSTestProject-C";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		DB0FFA882597D60600563B99 /* ColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPalette.swift; sourceTree = "<group>"; };
+		DB0FFA8B2597D95200563B99 /* HTTPError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPError.swift; sourceTree = "<group>"; };
+		DB0FFA922597DB7500563B99 /* iOSTestProject-C-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOSTestProject-C-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DB0FFA962597DB7500563B99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB0FFAA22597F40A00563B99 /* DataServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceTests.swift; sourceTree = "<group>"; };
+		DB0FFAA62597F4E000563B99 /* PostsDataServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsDataServiceMock.swift; sourceTree = "<group>"; };
+		DB0FFAAB2597F55000563B99 /* Posts.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Posts.json; sourceTree = "<group>"; };
+		DB0FFAB12597F57C00563B99 /* Users.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Users.json; sourceTree = "<group>"; };
+		DB0FFAB72597F5A400563B99 /* Comments.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Comments.json; sourceTree = "<group>"; };
+		DB0FFABF2597F6FC00563B99 /* UsersDataServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersDataServiceMock.swift; sourceTree = "<group>"; };
+		DB0FFAC32597F79600563B99 /* CommentsDataServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsDataServiceMock.swift; sourceTree = "<group>"; };
+		DB0FFACB2597F7E800563B99 /* WebServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceTests.swift; sourceTree = "<group>"; };
+		DB167F5E25980E11001047B6 /* PostsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewModelTests.swift; sourceTree = "<group>"; };
+		DB167F64259810CA001047B6 /* UserServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServiceMock.swift; sourceTree = "<group>"; };
+		DB167F68259810DF001047B6 /* PostServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostServiceMock.swift; sourceTree = "<group>"; };
+		DB167F6E259816E9001047B6 /* PostDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsViewModelTests.swift; sourceTree = "<group>"; };
+		DB167F7425981703001047B6 /* CommentServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentServiceMock.swift; sourceTree = "<group>"; };
 		DB3E97E72596548F008D0907 /* PostDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsViewController.swift; sourceTree = "<group>"; };
 		DB3E97E82596548F008D0907 /* PostDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostDetailsViewController.xib; sourceTree = "<group>"; };
 		DB3E97EC259654C1008D0907 /* PostDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsViewModel.swift; sourceTree = "<group>"; };
@@ -67,6 +107,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		DB0FFA8F2597DB7500563B99 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DB4766302593C96B0014E458 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -77,6 +124,83 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB0FFA932597DB7500563B99 /* iOSTestProject-C-Tests */ = {
+			isa = PBXGroup;
+			children = (
+				DB167F7F25981C9E001047B6 /* SupportFiles */,
+				DB167F6D259816B3001047B6 /* Post Details Page */,
+				DB167F6C2598168B001047B6 /* Posts Page */,
+				DB0FFAAA2597F51300563B99 /* Service */,
+			);
+			path = "iOSTestProject-C-Tests";
+			sourceTree = "<group>";
+		};
+		DB0FFAAA2597F51300563B99 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				DB0FFAA22597F40A00563B99 /* DataServiceTests.swift */,
+				DB0FFACB2597F7E800563B99 /* WebServiceTests.swift */,
+				DB167F7A25981C3B001047B6 /* Mock */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		DB167F6C2598168B001047B6 /* Posts Page */ = {
+			isa = PBXGroup;
+			children = (
+				DB167F5E25980E11001047B6 /* PostsViewModelTests.swift */,
+				DB167F7B25981C48001047B6 /* Mock */,
+			);
+			path = "Posts Page";
+			sourceTree = "<group>";
+		};
+		DB167F6D259816B3001047B6 /* Post Details Page */ = {
+			isa = PBXGroup;
+			children = (
+				DB167F6E259816E9001047B6 /* PostDetailsViewModelTests.swift */,
+				DB167F7C25981C53001047B6 /* Mock */,
+			);
+			path = "Post Details Page";
+			sourceTree = "<group>";
+		};
+		DB167F7A25981C3B001047B6 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				DB0FFAA62597F4E000563B99 /* PostsDataServiceMock.swift */,
+				DB0FFAAB2597F55000563B99 /* Posts.json */,
+				DB0FFABF2597F6FC00563B99 /* UsersDataServiceMock.swift */,
+				DB0FFAB12597F57C00563B99 /* Users.json */,
+				DB0FFAC32597F79600563B99 /* CommentsDataServiceMock.swift */,
+				DB0FFAB72597F5A400563B99 /* Comments.json */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		DB167F7B25981C48001047B6 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				DB167F64259810CA001047B6 /* UserServiceMock.swift */,
+				DB167F68259810DF001047B6 /* PostServiceMock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		DB167F7C25981C53001047B6 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				DB167F7425981703001047B6 /* CommentServiceMock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		DB167F7F25981C9E001047B6 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				DB0FFA962597DB7500563B99 /* Info.plist */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
 		DB4383682594EC60008FEC99 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +218,7 @@
 				DB4383792594EE22008FEC99 /* DataService.swift */,
 				DB43837C2594EE33008FEC99 /* WebService.swift */,
 				DB43837F2594F0B0008FEC99 /* EndPoints.swift */,
+				DB0FFA8B2597D95200563B99 /* HTTPError.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -150,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				DB4766352593C96B0014E458 /* iOSTestProject-C */,
+				DB0FFA932597DB7500563B99 /* iOSTestProject-C-Tests */,
 				DB4766342593C96B0014E458 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -158,6 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				DB4766332593C96B0014E458 /* iOSTestProject-C.app */,
+				DB0FFA922597DB7500563B99 /* iOSTestProject-C-Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -178,6 +305,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		DB0FFA912597DB7500563B99 /* iOSTestProject-C-Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DB0FFA992597DB7500563B99 /* Build configuration list for PBXNativeTarget "iOSTestProject-C-Tests" */;
+			buildPhases = (
+				DB0FFA8E2597DB7500563B99 /* Sources */,
+				DB0FFA8F2597DB7500563B99 /* Frameworks */,
+				DB0FFA902597DB7500563B99 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DB0FFA982597DB7500563B99 /* PBXTargetDependency */,
+			);
+			name = "iOSTestProject-C-Tests";
+			productName = "iOSTestProject-C-Tests";
+			productReference = DB0FFA922597DB7500563B99 /* iOSTestProject-C-Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		DB4766322593C96B0014E458 /* iOSTestProject-C */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DB4766472593C96D0014E458 /* Build configuration list for PBXNativeTarget "iOSTestProject-C" */;
@@ -204,6 +349,10 @@
 				LastSwiftUpdateCheck = 1230;
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
+					DB0FFA912597DB7500563B99 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = DB4766322593C96B0014E458;
+					};
 					DB4766322593C96B0014E458 = {
 						CreatedOnToolsVersion = 12.3;
 					};
@@ -223,11 +372,22 @@
 			projectRoot = "";
 			targets = (
 				DB4766322593C96B0014E458 /* iOSTestProject-C */,
+				DB0FFA912597DB7500563B99 /* iOSTestProject-C-Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		DB0FFA902597DB7500563B99 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB0FFAB82597F5A400563B99 /* Comments.json in Resources */,
+				DB0FFAB22597F57C00563B99 /* Users.json in Resources */,
+				DB0FFAAC2597F55000563B99 /* Posts.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DB4766312593C96B0014E458 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -245,6 +405,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		DB0FFA8E2597DB7500563B99 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB0FFAC02597F6FC00563B99 /* UsersDataServiceMock.swift in Sources */,
+				DB167F7525981703001047B6 /* CommentServiceMock.swift in Sources */,
+				DB167F6F259816E9001047B6 /* PostDetailsViewModelTests.swift in Sources */,
+				DB167F65259810CA001047B6 /* UserServiceMock.swift in Sources */,
+				DB167F69259810DF001047B6 /* PostServiceMock.swift in Sources */,
+				DB0FFAC42597F79600563B99 /* CommentsDataServiceMock.swift in Sources */,
+				DB0FFAA72597F4E000563B99 /* PostsDataServiceMock.swift in Sources */,
+				DB0FFACC2597F7E800563B99 /* WebServiceTests.swift in Sources */,
+				DB167F5F25980E11001047B6 /* PostsViewModelTests.swift in Sources */,
+				DB0FFAA32597F40A00563B99 /* DataServiceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DB47662F2593C96B0014E458 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -257,6 +434,7 @@
 				DB43837A2594EE22008FEC99 /* DataService.swift in Sources */,
 				DB3E97ED259654C1008D0907 /* PostDetailsViewModel.swift in Sources */,
 				DB4383AA25954C45008FEC99 /* PostCellViewModel.swift in Sources */,
+				DB0FFA8C2597D95200563B99 /* HTTPError.swift in Sources */,
 				DB43837D2594EE33008FEC99 /* WebService.swift in Sources */,
 				DB4383772594EE07008FEC99 /* Comment.swift in Sources */,
 				DB4383852594FC60008FEC99 /* User.swift in Sources */,
@@ -273,6 +451,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		DB0FFA982597DB7500563B99 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DB4766322593C96B0014E458 /* iOSTestProject-C */;
+			targetProxy = DB0FFA972597DB7500563B99 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		DB4766412593C96D0014E458 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -285,6 +471,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		DB0FFA9A2597DB7500563B99 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ML69J96EQG;
+				INFOPLIST_FILE = "iOSTestProject-C-Tests/SupportFiles/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.myProject.iOSTestProject-C-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOSTestProject-C.app/iOSTestProject-C";
+			};
+			name = Debug;
+		};
+		DB0FFA9B2597DB7500563B99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ML69J96EQG;
+				INFOPLIST_FILE = "iOSTestProject-C-Tests/SupportFiles/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.myProject.iOSTestProject-C-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iOSTestProject-C.app/iOSTestProject-C";
+			};
+			name = Release;
+		};
 		DB4766452593C96D0014E458 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -442,6 +668,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		DB0FFA992597DB7500563B99 /* Build configuration list for PBXNativeTarget "iOSTestProject-C-Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB0FFA9A2597DB7500563B99 /* Debug */,
+				DB0FFA9B2597DB7500563B99 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		DB47662E2593C96B0014E458 /* Build configuration list for PBXProject "iOSTestProject-C" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
