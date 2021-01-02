@@ -13,7 +13,10 @@ This app is written with Swift programming language for iOS and with other techn
 - Providing the possibility of setting the number of the posts per request, because we do not need to get all posts from the server. It would be a big problem in the future when the number of posts did grow. we can use pagination instead.
 - I think after the modifications above is a better situation to have some sort of persistence mechanism. For example, we can save some of the last posts in the DataBase by using CoreData or Realm frameworks and implementing Repository Pattern.
 - Adding some more content for users and posts like profile pictures for users and etc, to make the UI more beautiful and user-friendly.
-- Adding a user profile page for seeing the users' profile details like pictures, all the posts of that user and etc. 
+- Adding a user profile page for seeing the users' profile details like pictures, all the posts of that user, etc. 
+
+## Architecture 
+The architecture of the app is MVVM, I decided to use MVVM instead of VIPER because VIPER can be better in larger-scale projects but for smaller projects like this MVVM is a better choice.
 
 ## Run
 To run please open iOSTestProject-C.xcodeproj chose device or simulator and run.
